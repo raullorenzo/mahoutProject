@@ -10,12 +10,11 @@ import org.apache.mahout.cf.taste.model.DataModel;
 import org.apache.mahout.cf.taste.neighborhood.UserNeighborhood;
 import org.apache.mahout.cf.taste.recommender.Recommender;
 import org.apache.mahout.cf.taste.similarity.UserSimilarity;
+import java.math.BigDecimal;
 
 import java.io.File;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.math.RoundingMode;
-
 
 
 public class EvaluateRecommender {
@@ -31,7 +30,7 @@ public class EvaluateRecommender {
         DataModel model = new FileDataModel(new File("src/main/input/dataset.csv"));
         RecommenderEvaluator evaluator = new AverageAbsoluteDifferenceRecommenderEvaluator();
         RecommenderBuilder builder = new MyRecommenderBuilder();
-        double result = evaluator.evaluate(builder, null, model, 0.9, 1.0); //trainingset-->90% and a testset-->10%
+        double result = evaluator.evaluate(builder, null, model, 0.5, 1.0); //trainingset-->90% and a testset-->10%
         //double resultado = Math.round(result);
         double resultado = result*100;
         BigDecimal big = new BigDecimal(resultado);
@@ -42,8 +41,10 @@ public class EvaluateRecommender {
         System.out.println("|                                                 |");
         //System.out.println("  * Exactitud del Recomendador: "+Math.round(result)*100+"% *");
         //System.out.println("  * Exactitud del Recomendador: "+Math.rint(result*100)+"% *");
-        System.out.println("|      * Accurazy of Recommender: "+big+"%          |");
+        System.out.println("|      * Accurazy of Recommender: "+big+"%        |");
         System.out.println("|                                                 |");
         System.out.println("===================================================");
     }
 }
+
+
