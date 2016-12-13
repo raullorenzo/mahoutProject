@@ -51,18 +51,24 @@ public class Recommender extends EvaluateRecommender {
         String genrefilm;
 
         System.out.println("");
+        System.out.println("----------------------------------------------------------------------------------------------");
+        System.out.println("|********************************************************************************************|");
+        System.out.println("|*                                                                                          *|");
+        System.out.println("|*                           ...WELCOME TO OUR FILM PREDICTOR...                            *|");
+        System.out.println("|*                                                                                          *|");
+        System.out.println("|********************************************************************************************|");
+        System.out.println("----------------------------------------------------------------------------------------------");
         System.out.println("");
         System.out.println("");
-        System.out.println("Loading:");
-        System.out.println("");
+        System.out.print("Loading: ");
         sleep(300);
-        System.out.print("[  * ");
+        System.out.print("[  * * * * * * * * * ");
         sleep(1000);
-        System.out.print("* * * ");
+        System.out.print("* * * * ");
         sleep(300);
-        System.out.print("* ");
+        System.out.print("* * * * * * ");
         sleep(1200);
-        System.out.print("* * * * *  ]");
+        System.out.print("* * * * * * * * * * * * * * * * * * * * *  ]");
         sleep(300);
         Scanner scanner = new Scanner(System.in);
         Scanner wait = new Scanner(System.in);
@@ -176,7 +182,27 @@ public class Recommender extends EvaluateRecommender {
                     break;
 
                 case 6:
-                    System.out.print("\n...SEE YOU SOON...!  \n");
+                    int espacios = 20;
+                    for (int i = 0; i < espacios; i++) {
+                        System.out.println();
+                    }
+                    System.out.print("Closing...");
+                    sleep(800);
+                    System.out.print("........");
+                    sleep(500);
+                    System.out.print("................");
+                    sleep(1200);
+                    System.out.print("......................................");
+                    System.out.println("");
+                    System.out.println("");
+                    System.out.println("");
+                    System.out.println("");
+                    sleep(400);
+                    System.out.println("========================================================================");
+                    System.out.println("*                                                                      *");
+                    System.out.println("*                       ...SEE YOU SOON...!                            *");
+                    System.out.println("*                                                                      *");
+                    System.out.println("========================================================================");
             }
         }
     }
